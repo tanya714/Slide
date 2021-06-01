@@ -1,0 +1,71 @@
+<!--basic jQuery animation practice-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+
+            function() {
+                $(".container").mouseenter(function() {
+                    $(".circle").animate({
+                        marginLeft: '650px',
+                        opacity: '100%',
+                    }, "slow");
+                });
+                $(".container").mouseleave(function() {
+                    $(".circle").animate({
+                        marginLeft: '10px',
+                        opacity: '0%',
+                    }, "slow");
+                });
+                $(".container").mouseenter(function() {
+                    $(".container").animate({
+                        width: '50%',
+
+                    }, "slow");
+                });
+                $(".container").mouseleave(function() {
+                    $(".container").animate({
+                        width: '10%',
+                    }, "slow");
+                });
+            }
+        )
+    </script>
+    <style>
+        .container {
+            width: 8.5%;
+            background-color: lightgrey;
+            margin: 10px;
+            padding-top: 10px;
+            padding-bottom: 0px;
+            padding-left: 10px;
+            height: 110px;
+        }
+        
+        .circle {
+            background-color: black;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            margin-left: 10px;
+            position: relative;
+            opacity: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
